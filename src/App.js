@@ -5,6 +5,7 @@ import Title from './components/Title';
 import NavBar from './components/NavBar';
 
 
+
 class App extends Component {
 
   state = {
