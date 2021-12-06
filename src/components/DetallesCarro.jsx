@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
 const styles = {
-    // detallescarro: {
-    //   backgroundColor: '#fff',
-    //   position: 'absolute',
-    //   marginTop: 30,
-    //   boxShadow: '1px 5px 5px rgb(0,0,0,0.3)',
-    //   borderRadius: '5px',
-    //   width: '300px',
-    //   right: 50,
-    // },
+    detallescarro: {
+      backgroundColor: '#fff',
+      position: 'absolute',
+      marginTop: 30,
+      boxShadow: '1px 5px 5px rgb(0,0,0,0.3)',
+      borderRadius: '5px',
+      width: '300px',
+      right: 50,
+    },
     ul: {
       margin: 0,
       padding: 0,
