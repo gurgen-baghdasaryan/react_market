@@ -10,14 +10,28 @@ class App extends Component {
 
   state = {
     productos: [
-      { name: 'Tomate', price: 170, img: '/productos/tomate.jpeg' },
-      { name: 'Arbejas', price: 240, img: '/productos/arbejas.jpeg' },
-      { name: 'Lechuga', price: 199, img: '/productos/lechuga.jpeg' },
-    ]
+      { name: 'Tomate', price: 170, img: '/productos/tomate.jpg' },
+      { name: 'Arbejas', price: 240, img: '/productos/arbejas.jpg' },
+      { name: 'Lechuga', price: 199, img: '/productos/lechuga.jpg' },
+    ],
+    carro: [],
   }
 
-  render() {
+  agregarAlCArro = (producto) => {
+    console.log(producto);
+    return this.setState({
+      carro: this.state.carro.concat({
+        ...producto,
+        cantidad: 1,
+      })
 
+    })
+  }
+
+
+
+  render() {
+    console.log(this.state.carro);
     return (
       <div>
         <NavBar />
@@ -25,7 +39,7 @@ class App extends Component {
 
           <Title />
           <Productos
-            agregarAlCArro={() => console.log('we are waithing for...')}
+            agregarAlCArro={this.agregarAlCArro}
             productos={this.state.productos}
           />
         </Layout>
