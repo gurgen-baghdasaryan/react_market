@@ -6,12 +6,12 @@ import Producto from './Producto';
 const styles = {
 
     productos: {
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
     }
-
-}
+    
+  }
 
 class Productos extends Component {
 
