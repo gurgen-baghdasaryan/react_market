@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CestaCanti from './CestaCanti';
+import DetallesCarro from './DetallesCarro';
 
 const styles = {
     carro: {
@@ -20,14 +21,19 @@ const styles = {
 
 class Carro extends Component {
     render() {
+        const { carro } = this.props
+        const cantidad = carro.reduce((acc, el) => acc + el.cantidad, 0)
         return (
             <div>
                 <span style={styles.cestacanti}>
-                    <CestaCanti value={10}/>
+                    {cantidad !== 0
+                        ? <CestaCanti value={cantidad} />
+                        : null}
                 </span>
                 <button style={styles.carro}>
                     Carro
                 </button>
+                <DetallesCarro carro={carro}/>
             </div>
         );
     }
