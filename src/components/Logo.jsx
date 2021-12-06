@@ -5,6 +5,12 @@ const styles = {
         fontSize: '2rem',
       }
 }
+// const styles = {
+//     logo:{
+//         fontWeight: '700',
+//         fontSize: '2rem',
+//       }
+// }
 
 class Logo extends Component {
     
