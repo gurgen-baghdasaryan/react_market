@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Productos from './components/Productos';
 import Layout from './components/Layout';
 import Title from './components/Title';
+import NavBar from './components/NavBar';
 
 
 class App extends Component {
@@ -18,8 +19,10 @@ class App extends Component {
 
     return (
       <div>
+        <NavBar />
         <Layout>
-        <Title/>
+
+          <Title />
           <Productos
             agregarAlCArro={() => console.log('we are waithing for...')}
             productos={this.state.productos}
